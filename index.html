@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carta de Amor</title>
+    <link rel="stylesheet" href="css/carta.css">
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+            padding: 20px;
+        }
+        .carta {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+        }
+        h1 {
+            color: #ff4d4d;
+        }
+        .contador {
+            font-size: 24px;
+            font-weight: bold;
+            color: #d63333;
+        }
+        .link {
+            margin-top: 20px;
+            display: inline-block;
+            background-color: #ff4d4d;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="carta">
+        <h1>Para mi amor, mi mujer, mi princesa te veo y no puedo parar de sonreir💖</h1>
+        <p>Amor esta paguina la actualizare con pdfs bonitos ❤️ cada que termine el cronometro 
+            asi puedes entrar y saldra un mensaje diciendo 
+            <span class="resaltado">¡Ya llegó el día! 💖</span> 
+            y en ese momento el documento estara listo y podras abrirlo amor ❤️ mi vida
+            cada día que pasa, mi corazón late más fuerte por ti. Eres la luz de mi
+            vida y la razón de mi felicidad. Te amo con todo mi ser y siempre lo haré.</p>
+            <div class="gif-container">
+                <img src="https://th.bing.com/th/id/R.7a3efb5796251264f6102722949b7ce9?rik=9kfHG5dU5XfHeQ&pid=ImgRaw&r=0" alt="Hello Kitty" class="gif">
+                <img src="https://www.gifcen.com/wp-content/uploads/2023/11/hello-kitty-gif-2.gif" alt="Hello Kitty Amor" class="gif">
+                <img src="https://usagif.com/wp-content/uploads/gify/hello-kitty-sticker-3.gif" alt="Hello Kitty Tierno" class="gif"> <!-- Si tienes uno guardado -->
+            </div>
+        <p>Faltan <span id="contador" class="contador"></span>  mi amor tu cumpleaños 💕</p>
+        <a class="link" href="imagenes/" target="_blank">Feliz Cumpleaños mi amor (aun no esta subido)</a><br>
+        <a class="link" href="imagenes/Como me enamore de ti.pdf" target="_blank">Como me enamore de ti ❤️</a><br>
+        <a class="link" href="imagenes/Querida Valery.pdf" target="_blank">Querida Valery ❤️</a><br>
+        <a class="link" href="imagenes/Te amo ya 4 meses mi amor.pdf" target="_blank">Carta de los 4 meses ❤️</a>
+        <a class="link" href="imagenes/5 meses mi amorcito.pdf" target="_blank">Carta de los 5 meses ❤️</a>
+        <h2>Galería de Imágenes ❤️ </h2>
+        <div class="gallery">
+            <img src="imagenes/Amor-hello-kity-y-spiderman.jpg" alt="Imagen 1" onclick="openLightbox(this.src)">
+            <img src="imagenes/mi amor .png" alt="Imagen 2" onclick="openLightbox(this.src)">
+            <img src="imagenes/Mi amor collage corazón.png" alt="Imagen 3" onclick="openLightbox(this.src)">
+            <img src="imagenes/marco de amor .png" alt="Imagen 4" onclick="openLightbox(this.src)">
+        </div>
+        
+        <div class="lightbox" id="lightbox">
+            <span class="close" onclick="closeLightbox()">×</span>
+            <img id="lightbox-img">
+        </div>
+        
+        <script>
+            function openLightbox(src) {
+                document.getElementById('lightbox-img').src = src;
+                document.getElementById('lightbox').style.display = 'flex';
+            }
+        
+            function closeLightbox() {
+                document.getElementById('lightbox').style.display = 'none';
+            }
+        </script>
+            </div>
+        
+    <script>
+        function actualizarContador() {
+            const fechaObjetivo = new Date('2025-03-20T12:00:00'); // Modifica la fecha
+            const ahora = new Date();
+            const diferencia = fechaObjetivo - ahora;
+
+            if (diferencia > 0) {
+                const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+                const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+                const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+                document.getElementById("contador").innerText = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+            } else {
+                document.getElementById("contador").innerText = "¡Ya llegó el día! 💖";
+            }
+        }
+        setInterval(actualizarContador, 1000);
+        actualizarContador();
+        
+    </script>
+</body>
+</html>

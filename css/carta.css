@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #ffe6e6;
+    padding: 20px;
+}
+
+p {
+    font-size: 20px;
+    color: #333;
+    max-width: 600px;
+    margin: auto;
+    line-height: 1.5;
+}
+
+.carta {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+}
+
+h1 {
+    color: #ff4d4d;
+}
+
+.contador {
+    font-size: 24px;
+    font-weight: bold;
+    color: #d63333;
+}
+
+.link {
+    margin-top: 20px;
+    display: inline-block;
+    background-color: #ff4d4d;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.link:hover {
+    background-color: #cc3333;
+}
+
+.resaltado {
+    font-size: 18px; /* Texto más grande */
+    font-weight: bold; /* Negrita */
+    color: #ff0000; /* Rojo fuerte */
+    animation: latido 1s infinite alternate; /* Animación opcional */
+}
+
+@keyframes latido {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+.gif-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Espacio entre GIFs */
+    margin-top: 20px;
+}
+
+.gif {
+    width: 150px; /* Tamaño de los GIFs */
+    border-radius: 10px;
+    animation: rebote 1.5s infinite alternate; /* Efecto de rebote */
+}
+
+@keyframes rebote {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+.gallery img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+.gallery img:hover {
+    transform: scale(1.1);
+}
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+.lightbox img {
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}
+
+h2{
+    font-size: 18px; /* Texto más grande */
+    font-weight: bold; /* Negrita */
+    color: #ff0000; /* Rojo fuerte */
+    animation: latido 1s infinite alternate; /* Animación opcional */
+}
