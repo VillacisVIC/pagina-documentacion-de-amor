@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil Spotify</title>
+    <link rel="stylesheet" href="Spotify.css">
+    <script src="canciones.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div class="flex flex-col items-center">
+            <div class="w-full max-w-[320px] mx-auto bg-white shadow-md rounded-lg overflow-hidden dark:bg-zinc-900 mt-10">
+            </div>
+          </div>
+        <div class="profile-container">
+            <img src="Ojito hermoso terminado.jpg" alt="Foto de perfil" class="profile-img">
+            <h1 class="profile-name">Valery x Victor❤️</h1>
+        </div>
+        <h1 class="header-title">Yo x Ti, Tu x Mi ❤️ </h1>
+    </header>
+
+
+
+   <main class="main-content">
+    <h2 class="title">Mi amorcito esta solo es la interfas te reamooooo, y es una pagina tuya amor mira como se ve tu ojito de precioso❤️ </h2>
+    <p class="description">Aquí podremos escuchar musica mi amor bello❤️ </p>
+
+    <div class="player-container">
+        <div class="top-bar">
+            <h3 id="song-title">Musicas</h3>
+            <div class="menu-icon">☰</div>
+        </div>
+
+        <!-- Imagen o GIF de la canción -->
+        <div class="cover-art">
+            <img id="song-cover" src="https://th.bing.com/th/id/R.243d1716355567948c8a8f5e5b939ed1?rik=CCt4qJmZ3WLz1w&pid=ImgRaw&r=0" alt="Cover de la canción">
+        </div>
+
+        <div class="waveform"></div>
+
+        <div class="song-info">
+            <h4 id="song-artist">Yo x Ti❤️ Tu x Mi❤️</h4>
+            <p id="song-rating">★★★☆☆</p>
+        </div>
+
+        <div class="controls">
+            <button class="prev" onclick="prevSong()">⏮</button>
+            <button class="play" onclick="togglePlay()">▶</button>
+            <button class="next" onclick="nextSong()">⏭</button>
+        </div>
+
+        <input type="range" id="progress-bar" class="progress-bar" min="0" max="100" value="0">
+
+        <audio id="audio-player">
+            <source src="ROSALÍA, Ozuna - Yo x Ti, Tu x Mi (Official Video) [2j3x0VYnehg].mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</main>
+
+    
+    
+</body>
+</html>
