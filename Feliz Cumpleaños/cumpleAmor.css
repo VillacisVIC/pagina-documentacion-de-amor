@@ -76,14 +76,6 @@ p{
     background-color: #444;
     color: white;
 }
-.mensaje {
-    text-align: center; /* Centra el texto */
-    font-size: 1.2rem; /* Hace el texto más legible en móviles */
-    max-width: 90%; /* Limita el ancho en celulares */
-    margin: auto; /* Lo centra en la pantalla */
-    line-height: 1.5; /* Mejora la legibilidad */
-    padding: 10px; /* Agrega un poco de espacio alrededor */
-}
 
 
 
