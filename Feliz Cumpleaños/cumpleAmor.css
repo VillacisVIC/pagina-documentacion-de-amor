@@ -1,87 +1,125 @@
+/* Estilo para el fondo de la página */
 body {
-    font-family: Arial, sans-serif;
+    background-color: #222; /* Fondo oscuro */
+    color: white; /* Texto en color blanco */
+    font-family: 'Arial', sans-serif;
     text-align: center;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh; /* Hace que el body ocupe al menos toda la pantalla */
+    padding: 50px;
     display: flex;
-    flex-direction: column;
+    justify-content: center;
+    background-color: #0b1522;
+    min-height: 100vh;
 }
 
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    flex: 1; /* Permite que el contenido crezca, empujando el enlace hacia abajo */
+/* Estilo del mensaje de cumpleaños */
+.mensaje {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    
 }
 
-h1 {
-    color: #333;
-}
-
-.fecha {
-    background: white;
-    padding: 15px;
-    margin: 10px 0;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-}
-
-.fecha img {
-    max-width: 100%;
-    border-radius: 10px;
-}
-.fecha img {
-    max-width: 45%;  /* Tamaño adecuado en pantallas grandes */
-    height: auto;
-    display: inline-block;
-    margin: 5px;
-    border-radius: 10px;
-}
-
-/* Ajuste para pantallas pequeñas (teléfonos) */
-@media (max-width: 600px) {
-    .fecha img {
-        max-width: 90%; /* Las imágenes ocuparán casi toda la pantalla */
-        display: block; /* Para que se apilen en lugar de estar en línea */
-        margin: 10px auto; /* Centra las imágenes */
-    }
-}
-
-p{
-    padding: 40px;
-    font-size: 20px;
-}
-
+/* Estilo del enlace */
 .mi-enlace {
     display: inline-block;
     font-size: 24px;
     font-weight: bold;
     color: red;
     text-decoration: none;
-    background-color: #333;
+    background-color: #333; /* Fondo gris oscuro */
     padding: 15px 30px;
     border-radius: 10px;
-    transition: background-color 0.3s, color 0.3s;
-    
-    /* Posicionamiento en la parte inferior de la página */
-    position: relative;
-    bottom: 0;
-    margin-top: auto; /* Empuja el enlace hacia la parte inferior */
+    transition: 0.3s;
 }
 
 /* Cambio de color al pasar el mouse */
-.mi-enlace:hover {
+.mi-enlace {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
     background-color: #444;
-    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.mi-enlace:hover {
+    background-color: #444; /* Cambia el color de fondo al pasar el cursor */
+    color: white; /* Cambia el color del texto */
+    padding-top: 20px; /* Agrega más espacio arriba */
 }
 
 
 
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+.heart {
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    position: absolute;
+    transform: rotate(-45deg);
+    bottom: 220px; /* Lo bajas un poco */
+    box-shadow: 10px 10px 90px #f20044;
+    animation: heart 0.6s linear infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
 
+@keyframes heart {
+    0% {
+        transform: rotate(-45deg) scale(0.9);
+    }
 
+    80%{
+        transform: rotate(-45deg) scale(1.0);
+    }
 
+    100%{
+        transform: rotate(-45deg) scale(0.8);
+    }
+    
+}
 
+.heart p {
+    position: absolute;
+    z-index: 999;
+    width: 100%;
+    transform: rotate(45deg) translate(0, -50px);
+}
+
+.heart::before{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    top: -50%;
+    border-radius: 100px;
+    box-shadow: -10px -10px 90px #f20044;
+
+}
+
+.heart::after{
+    content: "";
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    background-color: #f20044;
+    right: -50%;
+    border-radius: 100px;
+    box-shadow: 10px 10px 90px #f20044;
+    
+}
 
