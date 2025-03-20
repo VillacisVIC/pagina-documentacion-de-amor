@@ -13,9 +13,15 @@ body {
 
 /* Estilo del mensaje de cumpleaños */
 .mensaje {
-    font-size: 28px;
-    font-weight: bold;
-    margin-bottom: 20px;
+    text-align: center; /* Centra el texto */
+    font-size: 28px; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    margin-bottom: 10px; /* Espacio entre el texto y el corazón */
+    max-width: 90%; /* Que no sea demasiado ancho en celulares */
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5; /* Mejora la legibilidad */
+    padding: 10px; /* Espacio alrededor */
     
 }
 
